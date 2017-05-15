@@ -1,0 +1,9 @@
+<%= simple_form_for @checkout, validate: true, html: { id: "checkout" } do |co| %>
+  <%= co.input :name, label: t("label.fullname") %>
+  <%= co.input :email, label: t("label.email_address") %>
+  <%= co.input :phone, label: t("label.phone_number") %>
+
+  <div class="actions">
+    <%= co.submit %>
+  </div>
+<% end %>
