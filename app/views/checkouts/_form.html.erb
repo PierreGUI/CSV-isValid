@@ -3,6 +3,10 @@
   <%= co.input :email, label: t("label.email_address") %>
   <%= co.input :phone, label: t("label.phone_number") %>
 
+  <%= co.simple_fields_for :order, validate: true do |o| %>
+    <%= o.input :id, label: t("label.order_id"), validate: { presence: true, allow_blank: false } %>
+  <% end %>
+
   <div class="actions">
     <%= co.submit %>
   </div>
